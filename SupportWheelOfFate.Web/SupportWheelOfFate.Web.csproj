@@ -126,6 +126,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="app\controllers\homeController.js" />
+    <Content Include="app\core\app.config.js" />
+    <Content Include="app\views\home.html" />
     <Content Include="default.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -140,7 +144,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\" />
+    <Folder Include="app\services\" />
     <Folder Include="App_Data\" />
     <Folder Include="Server\Controllers\" />
   </ItemGroup>

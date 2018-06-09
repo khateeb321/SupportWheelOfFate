@@ -1,0 +1,17 @@
+packages/
+bin/
+obj/
+bower_components/
+bower_components
+node_modules/
+bower_components/
+logs.txt
+errors.txt
+public/
+*.suo
+.vs
+app.const.js
+server/content/compiled
+applicationhost.config
+WATG-ITChangeRequest.Web/public/js/app.js
+WATG-ITChangeRequest.Web/public/js/app.min.js

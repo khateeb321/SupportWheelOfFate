@@ -85,6 +85,8 @@
   <ItemGroup>
     <Compile Include="Migrations\Configrations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\BAUDetailsRepository.cs" />
+    <Compile Include="Repository\EngineersRepository.cs" />
     <Compile Include="WheelOfFaithContext.cs" />
   </ItemGroup>
   <ItemGroup>

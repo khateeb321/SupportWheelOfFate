@@ -78,7 +78,15 @@
 				});
 			container.on("click", spin);
 			function spin(d) {
+				if (oldpick.length >= 2){
+					swal(
+						'Chosen!',
+						'2 Engineers are already chosen for today.',
+						'error'
+					);
 
+					return;
+				}
 				container.on("click", null);
 				//all slices have been seen, all done
 				console.log("OldPick: " + oldpick.length, "Data length: " + data.length);
@@ -121,7 +129,7 @@
 							showCancelButton: true,
 							confirmButtonColor: '#3085d6',
 							cancelButtonColor: '#d33',
-							confirmButtonText: 'Yes, delete it!'
+							confirmButtonText: 'Yes!'
 						}).then(function (result) {
 							if (result.value) {
 								//oldpick.pop(); if no

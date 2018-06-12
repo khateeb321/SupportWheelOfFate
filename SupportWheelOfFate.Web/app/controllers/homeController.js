@@ -73,6 +73,7 @@
 			})
 				.attr("text-anchor", "end")
 				.text(function (d, i) {
+					//console.log("x");
 					return data[i].label;
 				});
 			container.on("click", spin);
@@ -96,9 +97,11 @@
 				picked = picked >= data.length ? (picked % data.length) : picked;
 				if (oldpick.indexOf(picked) !== -1) {
 					d3.select(this).call(spin);
+					//console.log("y");
 					return;
 				} else {
 					oldpick.push(picked);
+					//console.log("y");
 				}
 				rotation += 90 - Math.round(ps / 2);
 				vis.transition()
@@ -112,9 +115,10 @@
 						d3.select("#question h1")
 							.text(data[picked].question);
 						oldrotation = rotation;
-
+						// Done Here
 						container.on("click", spin);
 					});
+				//console.log("d");
 			}
 			//make arrow
 			svg.append("g")

@@ -110,13 +110,13 @@
 					.each("end", function () {
 						
 						//populate question
-						d3.select("#question h1")
-							.text(data[picked].question);
+						//d3.select("#question h1")
+						//	.text(data[picked].question);
 						oldrotation = rotation;
 						// Done Here
 						swal({
 							title: 'Are you sure?',
-							text: "You won't be able to revert this!",
+							text: "You want to pick " + data[picked].label,
 							type: 'warning',
 							showCancelButton: true,
 							confirmButtonColor: '#3085d6',
@@ -130,7 +130,7 @@
 									.attr("fill", "#111");
 								swal(
 									'Chosen!',
-									'Employee is chosen.',
+									 data[picked].label + ' is chosen.',
 									'success'
 								);
 							}

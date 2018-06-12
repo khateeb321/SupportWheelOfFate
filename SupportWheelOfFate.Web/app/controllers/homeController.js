@@ -2,11 +2,11 @@
 	"use strict";
 	angular
 		.module("wheelOfFaith")
-		.controller("homeController", files);
+		.controller("homeController", home);
 
-	files.$inject = ["$scope", "$window", "$timeout", "$uibModal", "$location", "engineersService"];
+	home.$inject = ["$scope", "$window", "$timeout", "$uibModal", "$location", "engineersService"];
 
-	function files($scope, $window, $timeout, $uibModal, $location, engineersService) {
+	function home($scope, $window, $timeout, $uibModal, $location, engineersService) {
 		/* jshint validthis:true */
 		
 		engineersService.getAllEngineers().then(function (response) {
@@ -108,14 +108,37 @@
 					.duration(3000)
 					.attrTween("transform", rotTween)
 					.each("end", function () {
-						//mark question as seen
-						d3.select(".slice:nth-child(" + (picked + 1) + ") path")
-							.attr("fill", "#111");
+						
 						//populate question
 						d3.select("#question h1")
 							.text(data[picked].question);
 						oldrotation = rotation;
 						// Done Here
+						swal({
+							title: 'Are you sure?',
+							text: "You won't be able to revert this!",
+							type: 'warning',
+							showCancelButton: true,
+							confirmButtonColor: '#3085d6',
+							cancelButtonColor: '#d33',
+							confirmButtonText: 'Yes, delete it!'
+						}).then(function (result) {
+							if (result.value) {
+								//oldpick.pop(); if no
+								//mark question as seen
+								d3.select(".slice:nth-child(" + (picked + 1) + ") path")
+									.attr("fill", "#111");
+								swal(
+									'Chosen!',
+									'Employee is chosen.',
+									'success'
+								);
+							}
+							else {
+								oldpick.pop();
+							}
+						});
+						
 						container.on("click", spin);
 					});
 				//console.log("d");

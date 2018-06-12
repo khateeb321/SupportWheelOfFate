@@ -83,7 +83,8 @@
 					"bower_components/ng-file-upload/FileAPI.min.js",
 					"bower_components/ng-file-upload/ng-file-upload-all.min.js",
 					"bower_components/twitter-bootstrap-wizard/jquery.bootstrap.wizard.js",
-					"bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js"
+					"bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js",
+					"bower_components/sweetalert2/dist/sweetalert2.js"
 				],
 				dest: "public/js/vendor.js"
 			},
@@ -108,7 +109,8 @@
 					"bower_components/ng-file-upload/FileAPI.min.js",
 					"bower_components/ng-file-upload/ng-file-upload-all.min.js",
 					"bower_components/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js",
-					"bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"
+					"bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js",
+					"bower_components/sweetalert2/dist/sweetalert2.min.js"
 				],
 				dest: "public/js/vendor.min.js"
 			}
@@ -165,6 +167,7 @@
 						"bower_components/fontawesome/css/font-awesome.min.css",
 						"bower_components/toastr/toastr.css",
 						"bower_components/footable/css/footable.core.min.css",
+						"bower_components/sweetalert2/dist/sweetalert2.css"
 					]
 				}
 			}

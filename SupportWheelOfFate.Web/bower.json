@@ -1,35 +1,36 @@
 {
-	"authors": [
-		"Tolga <tolga.k@outlook.com>"
-	],
-	"dependencies": {
-		"bootstrap": "*",
-		"fontawesome": "*",
-		"toastr": "*",
-		"angular-bootstrap": "*",
-		"moment": "*",
-		"jquery-ui": "~1.11.4",
-		"jquery": "1.10.2",
-		"angular-ui-select": "*",
-		"angular": "1.5.8",
-		"angular-route": "1.5.8",
-		"angular-sanitize": "1.5.8",
-		"angular-animate": "1.5.8",
-		"ng-file-upload": "*",
-		"twitter-bootstrap-wizard": "^1.4.2",
-		"bootstrap-ui-datetime-picker": "^2.6.0"
-	},
-	"ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components",
-		"test",
-		"tests"
-	],
-	"license": "ISC",
-	"name": "watg-itchangerequest",
-	"resolutions": {
-		"angular": "1.5.8"
-	},
-	"version": "1.0.0"
+  "authors": [
+    "Tolga <tolga.k@outlook.com>"
+  ],
+  "dependencies": {
+    "bootstrap": "*",
+    "fontawesome": "*",
+    "toastr": "*",
+    "angular-bootstrap": "*",
+    "moment": "*",
+    "jquery-ui": "~1.11.4",
+    "jquery": "1.10.2",
+    "angular-ui-select": "*",
+    "angular": "1.5.8",
+    "angular-route": "1.5.8",
+    "angular-sanitize": "1.5.8",
+    "angular-animate": "1.5.8",
+    "ng-file-upload": "*",
+    "twitter-bootstrap-wizard": "^1.4.2",
+    "bootstrap-ui-datetime-picker": "^2.6.0",
+    "sweetalert2": "^7.22.2"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "license": "ISC",
+  "name": "watg-itchangerequest",
+  "resolutions": {
+    "angular": "1.5.8"
+  },
+  "version": "1.0.0"
 }

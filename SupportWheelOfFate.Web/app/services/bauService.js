@@ -33,6 +33,16 @@
 						return response.data;
 					});
 			},
+			checkDateInWeek: function (date) {
+				return $http({
+					method: "GET",
+					url: "BAU/checkIfInWeek",
+					params: {date: date}
+				})
+					.then(function (response) {
+						return response.data;
+					});
+			},
 			getThisWeekData: function () {
 				return $http({
 					method: "GET",

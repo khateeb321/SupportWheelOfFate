@@ -25,6 +25,12 @@ namespace SupportWheelOfFate.Web.Server.Controllers
 			return Json(result, JsonRequestBehavior.AllowGet);
 		}
 
+		public ActionResult checkIfInWeek(DateTime date)
+		{
+			var result = DateInsideOneWeek(date, DateTime.Now);
+			return Json(result, JsonRequestBehavior.AllowGet);
+		}
+
 		public static bool DateInsideOneWeek(DateTime checkDate, DateTime referenceDate)
 		{
 			// get first day of week from your actual culture info, 

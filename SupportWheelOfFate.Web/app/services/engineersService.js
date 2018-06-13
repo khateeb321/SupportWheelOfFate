@@ -23,6 +23,16 @@
 					.then(function (response) {
 						return response.data;
 					});
+			},
+			getById: function (id) {
+				return $http({
+					method: "GET",
+					url: "Engineers/GetUserById",
+					params: {id: id}
+				})
+					.then(function (response) {
+						return response.data;
+					});
 			}
 		};
 	}

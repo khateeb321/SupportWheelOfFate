@@ -10,5 +10,6 @@ namespace SupportWheelOfFate.Interface.IRepository
 	{
 		List<BAUDetails> Save(List<BAUDetails> BAUDetailsList);
 		List<BAUDetails> GetAll();
+		bool Reset();
 	}
 }

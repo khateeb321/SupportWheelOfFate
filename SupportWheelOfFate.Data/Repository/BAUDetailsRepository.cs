@@ -28,5 +28,12 @@ namespace SupportWheelOfFate.Data.Repository
 			_db.SaveChanges();
 			return BAUDetailsList;
 		}
+
+		public bool Reset()
+		{
+			_db.BAUDetails.RemoveRange(_db.BAUDetails);
+			_db.SaveChanges();
+			return true;
+		}
 	}
 }

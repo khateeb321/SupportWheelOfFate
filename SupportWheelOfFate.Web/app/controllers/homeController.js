@@ -8,7 +8,6 @@
 
 	function home($scope, $window, $timeout, $uibModal, $location, engineersService, bauService) {
 		/* jshint validthis:true */
-
 		$scope.pickedDay = new Date();
 
 		engineersService.getAllEngineers().then(function (response) {
@@ -20,8 +19,18 @@
 
 			bauService.getThisWeekData().then(function (weekRes) {
 				console.log("Week: ", weekRes);
-				$scope.thisWeekData = weekRes;
+				$scope.thisWeekData = [];
 				angular.forEach(weekRes, function (weekItem) {
+
+					engineersService.getById(weekItem.UserId + 1).then(function (r) {
+						var userInfo = {};
+						userInfo.Name = r.name;
+						userInfo.UserId = r.Id;
+						userInfo.Rota = weekItem.Rota;
+
+						$scope.thisWeekData.push(userInfo);
+					});
+
 					var itemDate = new Date(parseInt(weekItem.Rota.substr(6))).toDateString();
 					var dateNow = new Date();
 
@@ -221,5 +230,13 @@
 				}
 			});
 		});
+
+		// Utility Functions
+
+		$scope.reset = function () {
+			bauService.reset().then(function (response) {
+				console.log(response);
+			});
+		};
 	}
 }());

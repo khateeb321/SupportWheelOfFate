@@ -15,6 +15,15 @@
 						return response.data;
 					});
 			},
+			reset: function (bauDetails) {
+				return $http({
+					method: "POST",
+					url: "BAU/Reset"
+				})
+					.then(function (response) {
+						return response.data;
+					});
+			},
 			getAllBAUDetails: function () {
 				return $http({
 					method: "GET",

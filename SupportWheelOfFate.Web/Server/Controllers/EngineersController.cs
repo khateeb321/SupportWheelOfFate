@@ -18,6 +18,11 @@ namespace SupportWheelOfFate.Web.Server.Controllers
 			var result = _repo.GetAll();
 			return Json(result, JsonRequestBehavior.AllowGet);
 		}
+		public ActionResult GetUserById(int id)
+		{
+			var result = _repo.GetAll().Where(m => m.Id == id).SingleOrDefault();
+			return Json(result, JsonRequestBehavior.AllowGet);
+		}
 
 		public ActionResult Save(Engineers engineer)
 		{

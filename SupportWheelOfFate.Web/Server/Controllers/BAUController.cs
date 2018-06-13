@@ -45,5 +45,11 @@ namespace SupportWheelOfFate.Web.Server.Controllers
 			var result = _repo.Save(bauDetails);
 			return Json(result, JsonRequestBehavior.AllowGet);
 		}
+
+		public ActionResult reset()
+		{
+			var result = _repo.Reset();
+			return Json(result, JsonRequestBehavior.AllowGet);
+		}
 	}
 }

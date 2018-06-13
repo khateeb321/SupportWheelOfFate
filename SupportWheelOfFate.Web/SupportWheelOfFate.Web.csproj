@@ -136,6 +136,7 @@
     <Content Include="app\app.js" />
     <Content Include="app\controllers\homeController.js" />
     <Content Include="app\core\app.config.js" />
+    <Content Include="app\core\app.helper.js" />
     <Content Include="app\services\bauService.js" />
     <Content Include="app\services\engineersService.js" />
     <Content Include="app\views\home.html" />

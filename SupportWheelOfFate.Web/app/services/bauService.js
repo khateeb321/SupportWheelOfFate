@@ -23,6 +23,15 @@
 					.then(function (response) {
 						return response.data;
 					});
+			},
+			getThisWeekData: function () {
+				return $http({
+					method: "GET",
+					url: "BAU/GetThisWeek"
+				})
+					.then(function (response) {
+						return response.data;
+					});
 			}
 		};
 	}

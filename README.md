@@ -1,6 +1,9 @@
-# SupportWheelOfFate
+# Welcome to StackEdit!
 
-## How to Run
+Demo application to randomly select two Engineers by spining the wheel. Project and Code itself is demonstration of the project.
+
+
+# How to Run
 NPM must be install before following steps
 
  1. Clone the repo
@@ -27,3 +30,7 @@ NPM must be install before following steps
  - **SupportWheelOfFate.Model** - DB Context / Entities / Models
  - **SupportWheelOfFate.Interfaces** - Interfaces
 
+## Demo
+
+Application is deployed on Microsoft Azure
+**Link:** http://wheeloffaith.ukwest.cloudapp.azure.com/wheeloffaith/default.html#/home

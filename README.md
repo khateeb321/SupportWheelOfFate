@@ -1,4 +1,4 @@
-# Welcome to StackEdit!
+# Support Wheel Of Fate
 
 Demo application to randomly select two Engineers by spining the wheel. Project and Code itself is demonstration of the project.
 

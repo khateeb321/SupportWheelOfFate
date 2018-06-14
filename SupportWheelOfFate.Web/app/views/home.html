@@ -1,15 +1,17 @@
-﻿<div ng-show="loading" class="loader">
-	<div class="loader__bar"></div>
-	<div class="loader__bar"></div>
-	<div class="loader__bar"></div>
-	<div class="loader__bar"></div>
-	<div class="loader__bar"></div>
-	<div class="loader__ball"></div>
+﻿<div class="loaderBody" ng-show="loading" >
+	<div class="loader">
+		<div class="loader__bar"></div>
+		<div class="loader__bar"></div>
+		<div class="loader__bar"></div>
+		<div class="loader__bar"></div>
+		<div class="loader__bar"></div>
+		<div class="loader__ball"></div>
+	</div>
 </div>
 
 <div ng-show="!loading" class="container" style="padding: 32px">
-	<div class="row" style="height: 560px">
-		<div class="col-md-6">
+	<div class="row">
+		<div class="col-md-6" style="height: 560px">
 			<h3>Spin</h3>
 			<div id="chartParent">
 				<div id="chart"></div>
@@ -17,25 +19,49 @@
 		</div>
 		
 		<div class="col-md-6">
-			<h2>Today:</h2>
-			<table style="width: 600px">
-				<thead>
-					<tr>
-						<th style="min-width: 42px">Id</th>
-						<th style="min-width: 42px">Name</th>
-						<th style="min-width: 42px">Date</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-repeat="data in today">
-						<td style="min-width: 42px">{{data.UserId}}</td>
-						<td style="min-width: 42px">{{data.Name}}</td>
-						<td style="min-width: 42px">{{data.Rota | parseDate}}</td>
-					</tr>
-				</tbody>
-			</table>
+			<div class="row" style="padding-bottom: 52px">
+				<h2>Today:</h2>
+				<table style="width: 600px">
+					<thead>
+						<tr>
+							<th style="min-width: 42px">Id</th>
+							<th style="min-width: 42px">Name</th>
+							<th style="min-width: 42px">Date</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="data in today">
+							<td style="min-width: 42px">{{data.UserId}}</td>
+							<td style="min-width: 42px">{{data.Name}}</td>
+							<td style="min-width: 42px">{{data.Rota | parseDate}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="row" style="padding-bottom: 32px">
+				<div>
+					<h3>This week:</h3>
+
+					<table style="width: 600px">
+						<thead>
+							<tr>
+								<th style="min-width: 42px">Id</th>
+								<th style="min-width: 42px">Name</th>
+								<th style="min-width: 42px">Date</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="data in thisWeekData">
+								<td style="min-width: 42px">{{data.UserId}}</td>
+								<td style="min-width: 42px">{{data.Name}}</td>
+								<td style="min-width: 42px">{{data.Rota | parseDate}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</div>
-		<div class="col-md-6"></div>
+		<!--<div class="col-md-6"></div>
 		<div class="col-md-6">
 			<h3>This week:</h3>
 
@@ -55,7 +81,7 @@
 					</tr>
 				</tbody>
 			</table>
-		</div>
+		</div>-->
 		
 	</div>
 	<div class="row">

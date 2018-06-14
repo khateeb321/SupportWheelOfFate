@@ -195,7 +195,7 @@
 												$scope.getThisWeekInfo();
 												swal(
 													'Chosen!',
-													data[picked].label + ' is chosen.',
+													data[picked].label + ' is chosen for BAU.',
 													'success'
 												);
 											});

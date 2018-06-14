@@ -12,6 +12,7 @@
 		$scope.loading = true;
 
 		$scope.getThisWeekInfo = function () {
+			$scope.loading = true;
 			$scope.today = [];
 			bauService.getThisWeekData().then(function (weekRes) {
 				$scope.thisWeekData = [];
@@ -38,6 +39,7 @@
 
 				});
 			});
+			$scope.loading = false;
 		};
 
 		$scope.AppInit = function () {

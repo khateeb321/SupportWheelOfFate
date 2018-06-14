@@ -27,7 +27,7 @@
 
 						var itemDate = new Date(parseInt(weekItem.Rota.substr(6))).toDateString();
 
-						console.log(itemDate, $scope.pickedDay.toDateString());
+						//console.log(itemDate, $scope.pickedDay.toDateString());
 						if (itemDate == $scope.pickedDay.toDateString()) {
 							// todayyy
 
@@ -46,7 +46,7 @@
 				var data = [];
 
 				angular.forEach(response, function (item) {
-					console.log(item);
+					//console.log(item);
 					data.push({ "label": item.name, "value": item.Id, "question": "What CSS property is used for specifying the area between the content and its border?" });
 				});
 
@@ -55,7 +55,7 @@
 
 				bauService.getAllBAUDetails().then(function (res) {
 					$scope.loading = false;
-					console.log("bar: ", res);
+					//console.log("bar: ", res);
 					angular.forEach(res, function (item) {
 						previousEng.push(item.UserId);
 					});
@@ -105,7 +105,7 @@
 					})
 						.attr("text-anchor", "end")
 						.text(function (d, i) {
-							//console.log("x");
+							////console.log("x");
 							return data[i].label;
 						});
 					container.on("click", spin);
@@ -136,9 +136,9 @@
 							}
 							container.on("click", null);
 							//all slices have been seen, all done
-							console.log("OldPick: " + oldpick.length, "Data length: " + data.length);
+							//console.log("OldPick: " + oldpick.length, "Data length: " + data.length);
 							if (oldpick.length == data.length) {
-								console.log("done");
+								//console.log("done");
 								$scope.reset();
 								container.on("click", null);
 								return;
@@ -153,11 +153,11 @@
 							picked = picked >= data.length ? (picked % data.length) : picked;
 							if (oldpick.indexOf(picked) !== -1) {
 								d3.select(this).call(spin);
-								//console.log("y");
+								////console.log("y");
 								return;
 							} else {
 								oldpick.push(picked);
-								//console.log("y");
+								////console.log("y");
 							}
 							rotation += 90 - Math.round(ps / 2);
 							vis.transition()
@@ -199,7 +199,7 @@
 													'success'
 												);
 											});
-											console.log("old: ", oldpick);
+											//console.log("old: ", oldpick);
 										}
 										else {
 											oldpick.pop();
@@ -208,7 +208,7 @@
 
 									container.on("click", spin);
 								});
-							//console.log("d");
+							////console.log("d");
 						});
 					}
 					//make arrow
@@ -245,7 +245,7 @@
 						var scale = d3.scale.linear().range([360, 1440]).domain([0, 100000]);
 						if (window.hasOwnProperty("crypto") && typeof window.crypto.getRandomValues === "function") {
 							window.crypto.getRandomValues(array);
-							console.log("works");
+							//console.log("works");
 						} else {
 							//no support for crypto, get crappy random numbers
 							for (var i = 0; i < 1000; i++) {

@@ -36,10 +36,12 @@
 						}
 					});
 
-
+					$scope.loading = false;
 				});
+
+				$scope.loading = false;
 			});
-			$scope.loading = false;
+			
 		};
 
 		$scope.AppInit = function () {
